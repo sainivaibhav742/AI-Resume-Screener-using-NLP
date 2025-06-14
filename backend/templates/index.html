@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+  <!-- Correct CSS and JS paths using Flask's url_for -->
+  <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+  <script src="{{ url_for('static', filename='script.js') }}"></script>
+
+  <title>AI Resume Screener</title>
+</head>
+<body>
+  <!-- Navbar (optional include) -->
+  <!--#include virtual="navbar.html"-->
+
+  <header class="content-section">
+    <h1>AI Resume Screener using NLP</h1>
+    <p>Automatically filters and ranks resumes using Natural Language Processing.</p>
+    
+    <!-- ✅ Correct demo link -->
+    <a class="btn" href="{{ url_for('demo') }}">View Demo</a>
+  </header>
+
+  <!-- Footer (optional include) -->
+  <!--#include virtual="footer.html"-->
+</body>
+</html>

@@ -1,0 +1,25 @@
+<form action="/upload" method="POST" enctype="multipart/form-data" class="resume-form">
+  <div class="form-group">
+    <label for="job_description">Job Description:</label>
+    <textarea
+      id="job_description"
+      name="job_description"
+      placeholder="Enter the job description here..."
+      rows="6"
+      required
+    ></textarea>
+  </div>
+
+  <div class="form-group">
+    <label for="resume">Upload Resume (PDF/DOCX):</label>
+    <input
+      type="file"
+      id="resume"
+      name="resume"
+      accept=".pdf,.docx"
+      required
+    />
+  </div>
+
+  <button type="submit" class="btn">Submit</button>
+</form>

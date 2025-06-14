@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Resume Screening Result</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 2rem;
+            background-color: #f0f2f5;
+        }
+        .result-container {
+            background-color: #fff;
+            padding: 1.5rem;
+            border-radius: 8px;
+            border: 1px solid #ccc;
+            max-width: 800px;
+            margin: auto;
+        }
+        .status-good {
+            color: green;
+            font-weight: bold;
+        }
+        .status-moderate {
+            color: orange;
+            font-weight: bold;
+        }
+        .status-bad {
+            color: red;
+            font-weight: bold;
+        }
+        pre {
+            background-color: #f4f4f4;
+            padding: 1rem;
+            border-radius: 5px;
+            overflow-x: auto;
+        }
+        a {
+            text-decoration: none;
+            color: #007bff;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="result-container">
+        <h2>✅ Resume Screening Result</h2>
+        <p><strong>File:</strong> {{ result.file_name }}</p>
+        <p><strong>Score:</strong> {{ result.score }}%</p>
+        <p>
+            <strong>Status:</strong>
+            <span class="{% if result.status == 'Strong Match' %}status-good{% elif result.status == 'Moderate Match' %}status-moderate{% else %}status-bad{% endif %}">
+                {{ result.status }}
+            </span>
+        </p>
+        <p><strong>Matched Keywords:</strong> {{ result.keywords_matched | join(', ') }}</p>
+        <h3>Resume Preview:</h3>
+        <pre>{{ result.preview }}</pre>
+        <br>
+        <a href="/">⬅️ Try Another</a>
+    </div>
+</body>
+</html>
