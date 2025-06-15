@@ -1,0 +1,14 @@
+{
+  "name": "ai-resume-screener-using-nlp",
+  "version": "1.0.0",
+  "description": "AI-powered resume screening frontend",
+  "main": "index.html",
+  "scripts": {
+    "start": "serve ."
+  },
+  "author": "Vaibhav Kumar",
+  "license": "MIT",
+  "dependencies": {
+    "serve": "^14.2.0"
+  }
+}
